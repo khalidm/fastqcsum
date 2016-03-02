@@ -28,7 +28,7 @@ def main():
     fastqc_summary_html = open(path_to_fastqcs + '/fastqcsum.html', mode='wb')
     html_str = getHtmlHeader2(path_to_fastqcs)
 
-    # walk a directory containing FastQC output for multiple samples
+    # look for fastqc_data.txt files through all sub-directories
     for root, dirs, files in os.walk(path_to_fastqcs):
         for name in files:
             if (name == "fastqc_data.txt"):
