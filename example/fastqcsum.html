@@ -1,0 +1,277 @@
+
+    <!DOCTYPE html>
+    <html lang="en-US">
+    <head>
+
+    <title>FastQC Summary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style type="text/css" media="screen">
+        .comment .button {
+            visibility: hidden;
+        }
+        .comment:hover .button {
+            visibility: visible;
+        }
+        .lead{
+            margin-top:20px;
+            margin-bottom:8px;
+            margin-left:20px;
+            font-size:22px;
+            font-weight:350;
+            //line-height:8.4;
+            font-family:'Trebuchet MS';
+        }
+        .lead_small{
+            margin-top:5px;
+            margin-bottom:5px;
+            margin-left:20px;
+            font-size:18px;
+            font-weight:350;
+            line-height:4.2;
+            font-family:'Trebuchet MS';
+        }
+        .container {
+             width: 28px;
+             height: 18px;
+             //overflow: auto;
+             overflow-x:scroll;
+             //position: absolute;
+        }
+        #tab {
+            color: #FFFFFF;
+            padding:20px;
+            display: table;
+            border: 0px solid black;
+        }
+        #row  {
+            display: table-row;
+        }
+        #name {
+            padding:1px;
+            background:#d5sdfs;
+            // border: 1px solid black;
+            border: 0px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+            color:#000000;
+            font-size:16px;
+            font-family:'Trebuchet MS';
+            font-weight:300;
+            line-height:1.4;
+        }
+        #pass {
+            padding:0px;
+            background: #5cb85c;
+            // border: 1px solid black;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+        #fail {
+            padding:0px;
+            background:#d9534f;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+        #warn {
+            padding:0px;
+            background:#f0ad4e;
+            //border: 1px solid black;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+
+        /*font-size:28px;
+        color:#ffffff;*/
+
+    </style>
+    <body>
+        <div>
+        <p class="lead"> FastQC summary </p>
+    
+        <p class="lead_small"> source directory: example/</p>
+    
+        </div>
+        <div id="tab">
+            <div class="container" id="row">
+                    <div class="container" id="name">
+                    File
+                    </div>
+                    <div class="container" id="name">
+                    Basic Statistics
+                    </div>
+                    <div class="container" id="name">
+                    Per base sequence quality
+                    </div>
+                    <div class="container" id="name">
+                    Per tile sequence quality
+                    </div>
+                    <div class="container" id="name">
+                    Per sequence quality scores
+                    </div>
+                    <div class="container" id="name">
+                    Per base sequence content
+                    </div>
+                    <div class="container" id="name">
+                    Per sequence GC content
+                    </div>
+                    <div class="container" id="name">
+                    Per base N content
+                    </div>
+                    <div class="container" id="name">
+                    Sequence Length Distribution
+                    </div>
+                    <div class="container" id="name">
+                    Sequence Duplication Levels
+                    </div>
+                    <div class="container" id="name">
+                    Overrepresented sequences
+                    </div>
+                    <div class="container" id="name">
+                    Adapter Content
+                    </div>
+                    <div class="container" id="name">
+                    Kmer Content
+                    </div>
+            </div>
+    
+                <div id="row">
+                
+                <div id="name">
+                sample_1_R1
+                </div>
+                <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_base_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_tile_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_sequence_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_base_sequence_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_sequence_gc_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/per_base_n_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/sequence_length_distribution.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/duplication_levels.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/adapter_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R1_fastqc/Images/kmer_profiles.png';" style="cursor:pointer;">
+                            </div>
+                            
+                </div>
+                
+                <div id="row">
+                
+                <div id="name">
+                sample_1_R2
+                </div>
+                <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_base_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_tile_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_sequence_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_base_sequence_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_sequence_gc_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/per_base_n_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/sequence_length_distribution.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/duplication_levels.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/adapter_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="fail" onclick="location.href='example/sample_1/sample_1_R2_fastqc/Images/kmer_profiles.png';" style="cursor:pointer;">
+                            </div>
+                            
+                </div>
+                
+                <div id="row">
+                
+                <div id="name">
+                sample_2_R1
+                </div>
+                <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_base_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_tile_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_sequence_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_base_sequence_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_sequence_gc_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/per_base_n_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/sequence_length_distribution.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/duplication_levels.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/adapter_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="fail" onclick="location.href='example/sample_2/sample_2_R1_fastqc/Images/kmer_profiles.png';" style="cursor:pointer;">
+                            </div>
+                            
+                </div>
+                
+                <div id="row">
+                
+                <div id="name">
+                sample_2_R2
+                </div>
+                <div id="pass" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_base_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_tile_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_sequence_quality.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_base_sequence_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_sequence_gc_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/per_base_n_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/sequence_length_distribution.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/duplication_levels.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="warn" onclick="location.href='';" style="cursor:pointer;">
+                            </div>
+                            <div id="pass" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/adapter_content.png';" style="cursor:pointer;">
+                            </div>
+                            <div id="fail" onclick="location.href='example/sample_2/sample_2_R2_fastqc/Images/kmer_profiles.png';" style="cursor:pointer;">
+                            </div>
+                            
+                </div>
+                
+    </div>
+    </body>
+    </html>
+    

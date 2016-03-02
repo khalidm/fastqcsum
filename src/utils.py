@@ -221,7 +221,7 @@ def getHtmlHeader2(path):
         <p class="lead"> FastQC summary </p>
     """
     html_str += """
-        <p class="lead_small"> FastQC source: """
+        <p class="lead_small"> source directory: """
     html_str += path
     html_str += """</p>
     """
