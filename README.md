@@ -6,4 +6,4 @@ coming soon...
 
 ## Example
 
-python src/main.py <path_to_fastq_files>
+python src/sum_fastqc.py -f <path_to_unzipped_fastqc_directories>
