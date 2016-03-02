@@ -12,4 +12,4 @@ path = path to directories containing unzipped FastQC output.
 
 ## Screenshot
 
-(docs/screenshot.png)
+(https://raw.githubusercontent.com/khalidm/fastqcsum/master/docs/screenshot.png)
