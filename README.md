@@ -9,3 +9,7 @@ coming soon...
 python src/sum_fastqc.py -f \<path\>
 
 path = path to directories containing unzipped FastQC output.
+
+## Screenshot
+
+(docs/screenshot.png)
