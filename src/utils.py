@@ -31,12 +31,10 @@ def getHtmlHeader():
                 visibility: visible;
             }
             #tab {
-                //width: 600px;
                 color: #FFFFFF;
                 padding:0px;
                 display: table;
                 border: 1px solid black;
-                //border: 1px solid black;
             }
             #row  {
                 display: table-row;
@@ -50,20 +48,16 @@ def getHtmlHeader():
                 color:#000000;
             }
             #pass {
-                //width:150px;
                 padding:0px;
                 background: #ccebc5;
                 border: 1px solid black;
                 display: table-cell;
-                //background:#BF721B url("none") top left repeat-y;
             }
             #fail {
-                //width:150px;
                 padding:0px;
                 background:#fbb4ae;
                 display: table-cell;
                 border: 1px solid black;
-                //background:#446E2C url("none") top right repeat-y;
             }
             #warn {
                 padding:0px;
@@ -73,12 +67,10 @@ def getHtmlHeader():
                 display: table-cell;
             }
 
-            /* optional div height ,width, color */
             width:400px;
             height:200px;
             background-color:#ffffff;
             font-size:28px;
-            /*color:#ffffff;*/
             color:#ffffff;
         </style>
         <body>
@@ -125,7 +117,159 @@ def getHtmlHeader():
                         Kmer Content
                         </div>
                 </div>
-        """
+    """
+    return html_str
+
+def getHtmlHeader2(path):
+    html_str = """
+    <!DOCTYPE html>
+    <html lang="en-US">
+    <head>
+
+    <title>FastQC Summary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style type="text/css" media="screen">
+        .comment .button {
+            visibility: hidden;
+        }
+        .comment:hover .button {
+            visibility: visible;
+        }
+        .lead{
+            margin-top:20px;
+            margin-bottom:8px;
+            margin-left:20px;
+            font-size:22px;
+            font-weight:350;
+            //line-height:8.4;
+            font-family:'Trebuchet MS';
+        }
+        .lead_small{
+            margin-top:5px;
+            margin-bottom:5px;
+            margin-left:20px;
+            font-size:18px;
+            font-weight:350;
+            line-height:4.2;
+            font-family:'Trebuchet MS';
+        }
+        .container {
+             width: 28px;
+             height: 18px;
+             //overflow: auto;
+             overflow-x:scroll;
+             //position: absolute;
+        }
+        #tab {
+            color: #FFFFFF;
+            padding:20px;
+            display: table;
+            border: 0px solid black;
+        }
+        #row  {
+            display: table-row;
+        }
+        #name {
+            padding:1px;
+            background:#d5sdfs;
+            // border: 1px solid black;
+            border: 0px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+            color:#000000;
+            font-size:16px;
+            font-family:'Trebuchet MS';
+            font-weight:300;
+            line-height:1.4;
+        }
+        #pass {
+            padding:0px;
+            background: #5cb85c;
+            // border: 1px solid black;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+        #fail {
+            padding:0px;
+            background:#d9534f;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+        #warn {
+            padding:0px;
+            background:#f0ad4e;
+            //border: 1px solid black;
+            border: 1px;
+            border-style: solid;
+            border-color: #bdbdbd;
+            display: table-cell;
+        }
+
+        /*font-size:28px;
+        color:#ffffff;*/
+
+    </style>
+    <body>
+        <div>
+        <p class="lead"> FastQC summary </p>
+    """
+    html_str += """
+        <p class="lead_small"> FastQC source: """
+    html_str += path
+    html_str += """</p>
+    """
+    html_str += """
+        </div>
+        <div id="tab">
+            <div class="container" id="row">
+                    <div class="container" id="name">
+                    File
+                    </div>
+                    <div class="container" id="name">
+                    Basic Statistics
+                    </div>
+                    <div class="container" id="name">
+                    Per base sequence quality
+                    </div>
+                    <div class="container" id="name">
+                    Per tile sequence quality
+                    </div>
+                    <div class="container" id="name">
+                    Per sequence quality scores
+                    </div>
+                    <div class="container" id="name">
+                    Per base sequence content
+                    </div>
+                    <div class="container" id="name">
+                    Per sequence GC content
+                    </div>
+                    <div class="container" id="name">
+                    Per base N content
+                    </div>
+                    <div class="container" id="name">
+                    Sequence Length Distribution
+                    </div>
+                    <div class="container" id="name">
+                    Sequence Duplication Levels
+                    </div>
+                    <div class="container" id="name">
+                    Overrepresented sequences
+                    </div>
+                    <div class="container" id="name">
+                    Adapter Content
+                    </div>
+                    <div class="container" id="name">
+                    Kmer Content
+                    </div>
+            </div>
+    """
     return html_str
 
 

@@ -14,6 +14,7 @@ from utils import *
 
 import os
 import sys
+import argparse
 
 def main():
     parser = argparse.ArgumentParser()
@@ -21,23 +22,17 @@ def main():
     # parser.add_argument("-o", "--output", type=str, dest="out", help="Output file name (html).", required=True)
 
     parser.add_argument("-v", "--verbosity", action="count", default=0)
-
     args = parser.parse_args()
 
-    outputfile = open(args.out, "w")
-    # path_to_fastqcs = sys.argv[1]
-
+    path_to_fastqcs = args.path_to_fastqcs
     fastqc_summary_html = open(path_to_fastqcs + '/fastqcsum.html', mode='wb')
-
-    html_str = getHtmlHeader()
+    html_str = getHtmlHeader2(path_to_fastqcs)
 
     # walk a directory containing FastQC output for multiple samples
     for root, dirs, files in os.walk(path_to_fastqcs):
         for name in files:
             if (name == "fastqc_data.txt"):
-                # use string slicing here if you only want part of the filename as
-                # the id
-                fileid = fileid = root.split("/")[-1][:-7]
+                sample_name = sample_name = root.split("/")[-1][:-7]
 
                 html_str += """
                 <div id="row">
@@ -45,7 +40,7 @@ def main():
                 html_str += """
                 <div id="name">
                 """
-                html_str += fileid
+                html_str += sample_name
                 html_str += """
                 </div>
                 """
@@ -53,12 +48,9 @@ def main():
                 with open(os.path.join(root, name), "r") as f:
                     for line in f.readlines():
                         line = line.strip()
-                        # summary data
                         if (line[:2] == ">>" and line[:12] != ">>END_MODULE"):
-                            module = line[2:-5]  # grab module name
-                            status = line[-4:]  # and overall status pass/warn/fail
-
-                            #image_file = root + "/Images/" + module.replace(" ", "_") + ".png"
+                            module = line[2:-5]
+                            status = line[-4:]
                             image_file = ""
 
                             img, img_exists = getImageName(module)
@@ -86,9 +78,7 @@ def main():
     """
 
     fastqc_summary_html.write(html_str)
-
     fastqc_summary_html.close()
-
 
 
 if __name__ == '__main__':
